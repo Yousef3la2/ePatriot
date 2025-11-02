@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import "@fontsource/ibm-plex-sans"; 
 import logo from "../assets/logo.png";
-import "./LandingPage.css";
+import "./layout/LandingPage.css";
 import { SlArrowDown } from "react-icons/sl";
 import heroImage from "../assets/Landing Page/Section 1/1.png";
 import heroImage2 from "../assets/Landing Page/Section 1/hero-bg.svg";
