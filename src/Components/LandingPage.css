@@ -346,7 +346,7 @@ font-family: "Cairo", sans-serif;
 }
 
 .main-desc {
-  margin: 10px 0 30px;
+  //margin: 10px 0 30px;
   color: #666;
   font-size: 14px;
   line-height: 1.4;

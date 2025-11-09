@@ -1,26 +1,18 @@
 import "./App.css";
-import Navbar from "./Components/layout/Navbar";
-import Footer from "./Components/layout/Footer";
-import HeroSection from "./Components/sections/HeroSection";
-import MainSection from "./Components/sections/MainSection";
-import WhySection from "./Components/sections/WhySection";
-import DiscoverSection from "./Components/sections/DiscoverSection";
-import OpinionsSection from "./Components/sections/OpinionsSection";
-import FAQSection from "./Components/sections/FAQSection";
-import "./Components/layout/LandingPage.css";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Components/pages/HomePage";
+import LoginPage from "./Components/pages/LoginPage";
+import ForgotPasswordPage from "./Components/pages/ForgotPasswordPage";
+import SignUpPage from "./Components/pages/SignUpPage";
 
 function App() {
   return (
-    <div className="landing-container">
-      <Navbar />
-      <HeroSection />
-      <MainSection />
-      <WhySection />
-      <DiscoverSection />
-      <OpinionsSection />
-      <FAQSection />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
+    </Routes>
   );
 }
 

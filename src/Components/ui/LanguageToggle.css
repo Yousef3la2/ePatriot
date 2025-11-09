@@ -1,0 +1,77 @@
+.language-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: white;
+  border-radius: 30px;
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Cairo", sans-serif;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.lang-button:hover {
+  color: #333;
+}
+
+.lang-button.active {
+  background: linear-gradient(135deg, #ff9a56 0%, #ff6b35 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+.flag-icon {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.lang-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lang-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .flag-icon {
+    font-size: 16px;
+  }
+
+  .lang-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lang-button {
+    padding: 6px 10px;
+  }
+
+  .lang-text {
+    display: none;
+  }
+
+  .flag-icon {
+    font-size: 20px;
+  }
+}

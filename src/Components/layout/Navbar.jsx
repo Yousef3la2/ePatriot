@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Navbar = () => {
@@ -22,7 +23,7 @@ const Navbar = () => {
       <div className="navbar-center">
         <ul className="navbar-ul">
           <li>
-            <a href="#">Home Page</a>
+            <Link to="/">Home Page</Link>
           </li>
           <li
             className="dropdown"
@@ -73,6 +74,14 @@ const Navbar = () => {
             )}
           </li>
         </ul>
+      </div>
+      <div className="navbar-right">
+        <Link to="/login" className="login-btn">
+          Login
+        </Link>
+        <Link to="/signup" className="signup-btn">
+          Sign Up
+        </Link>
       </div>
     </nav>
   );

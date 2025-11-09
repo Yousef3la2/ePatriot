@@ -12,124 +12,191 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="footer-section">
-      <div className="footer-top">
-        <div className="footer-main">
-          <div className="footer-brand">
-            <div className="brand-logo">
-              <img src={logo} alt="ePatroit Logo" />
-              <span>Patroit</span>
-            </div>
-            <p className="brand-tagline">Keep your children safe online</p>
-            <div className="soical">
-              <a href="">
-                <FaSquareFacebook className="socail-icon" />
-              </a>
-              <a href="">
-                <FaInstagramSquare className="socail-icon" />
-              </a>
-              <a href="">
-                <FaLinkedin className="socail-icon" />
-              </a>
-              <a href="">
-                <FaSquareWhatsapp className="socail-icon" />
-              </a>
-            </div>
+    <>
+      {/* Contact Section - White Background */}
+      <div style={{
+        background: 'white',
+        padding: '30px 80px',
+        borderTop: '1px solid #e5e7eb'
+      }}>
+        <div style={{
+          marginRight: '100px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          gap: '40px'
+        }}>
+          {/* Contact us via email */}
+          <div style={{ flex: 1 }}>
+            <p style={{ fontSize: '13px', color: '#6b7280', margin: '0 0 4px 0' }}>
+              Contact us via email at
+            </p>
+            <p style={{ fontSize: '15px', fontWeight: 'bold', color: '#111827', margin: 0 }}>
+              Support+ePatroit@gmail.com
+            </p>
           </div>
 
-          <div className="footer-links footer-links2 footer-legal">
-            <h4>Legal</h4>
-            <ul>
-              <li>
-                <a href="#">Terms of Service</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Cookie Policy</a>
-              </li>
-            </ul>
+          {/* Call us at */}
+          <div style={{ flex: 1 }}>
+            <p style={{ fontSize: '13px', color: '#6b7280', margin: '0 0 4px 0' }}>
+              Call us at
+            </p>
+            <p style={{ fontSize: '15px', fontWeight: 'bold', color: '#111827', margin: 0 }}>
+              +201234565789
+            </p>
           </div>
 
-          <div className="footer-links footer-resource">
-            <h4>Resources</h4>
-            <ul>
-              <li>
-                <a href="#">Help Center</a>
-              </li>
-              <li>
-                <a href="#">For Parents</a>
-              </li>
-              <li>
-                <a href="#">For Teachers</a>
-              </li>
-              <li>
-                <a href="#">For Students</a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-links footer-links2">
-            <h4>Quick Links</h4>
-            <ul>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Frequently Asked Questions</a>
-              </li>
-              <li>
-                <a href="#">Programs</a>
-              </li>
-              <li>
-                <a href="#">Courses</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="footer-contact">
-          <h3>Contact us</h3>
-          <div className="contact-methods">
-            <div className="contact-method">
-              <div className="contact-icon">
-                <FaEnvelope />
-              </div>
-              <div className="contact-info">
-                <h4>via email at</h4>
-                <p>Support-ePatroit@gmail.com</p>
-              </div>
-            </div>
-
-            <div className="contact-method">
-              <div className="contact-icon">
-                <FaPhone />
-              </div>
-              <div className="contact-info">
-                <h4>Call us at</h4>
-                <p>+20123456789</p>
-              </div>
-            </div>
-
-            <button className="contact-method">
-              <div className="contact-icon">
-                <FaComments />
-              </div>
-              <div className="contact-info">
-                <h4>Chat with us</h4>
-                <p>Available 24/7</p>
-              </div>
-            </button>
-          </div>
+          {/* Chat with us button */}
+          <button style={{
+            background: 'white',
+            color: '#FF8C00',
+            border: '2px solid #FF8C00',
+            padding: '10px 22px',
+            borderRadius: '25px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            fontSize: '14px',
+            fontWeight: 600,
+            cursor: 'pointer',
+            whiteSpace: 'nowrap'
+          }}>
+            <span>Chat with us</span>
+            <FaComments style={{ fontSize: '16px' }} />
+          </button>
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>
-          &copy; 2024 ePatroit. All rights reserved. Keeping children safe in
-          the digital world.
-        </p>
-      </div>
-    </footer>
+
+      {/* Footer - Blue Background */}
+      <footer style={{
+        background: '#0066FF',
+        padding: '40px 80px',
+        width: '100%'
+      }}>
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          gap: '80px'
+        }}>
+          {/* Left: Logo and Social */}
+          <div style={{ flex: '0 0 auto', maxWidth: '250px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+              <img src={logo} alt="ePatroit Logo" style={{ width: '35px', height: '35px', borderRadius: '8px' }} />
+              <span style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Patroit</span>
+            </div>
+            <p style={{ fontSize: '14px', color: 'white', margin: '0 0 20px 0', lineHeight: 1.5 }}>
+              Keep your children safe online.
+            </p>
+            
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+                <FaSquareWhatsapp />
+              </a>
+              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+                <FaLinkedin />
+              </a>
+              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+                <FaInstagramSquare />
+              </a>
+              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+                <FaSquareFacebook />
+              </a>
+            </div>
+          </div>
+
+          {/* Right: Links Columns */}
+          <div style={{ 
+            display: 'flex', 
+            gap: '80px', 
+            flex: 1,
+            justifyContent: 'flex-end',
+            marginRight: '300px'
+          }}>
+            {/* Legal */}
+            <div>
+              <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
+                Legal
+              </h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    Terms of Service
+                  </a>
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    Privacy Policy
+                  </a>
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    Cookie Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
+                Resources
+              </h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    Help Center
+                  </a>
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    For Parents
+                  </a>
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    For Teachers
+                  </a>
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    For Students
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
+                Quick Links
+              </h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    About Us
+                  </a>
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    Frequently Asked Questions
+                  </a>
+                </li>
+                <li style={{ marginBottom: '12px' }}>
+                  <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
+                    Programs
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 };
 
