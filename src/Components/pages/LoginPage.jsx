@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./LoginPage.css";
+import logo from "../../assets/logo.png";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -9,6 +10,47 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
   const [language, setLanguage] = useState("en");
+
+  // تعريف كائن النصوص (نقله من الأعلى)
+  const translations = {
+  en: {
+    title: "Login",
+    subtitle: "Welcome back! Please log in to continue.",
+    emailLabel: "Email",
+    emailPlaceholder: "Email",
+    passwordLabel: "Password",
+    passwordPlaceholder: "Password",
+    forgotPassword: "Forgot your password?",
+    loginButton: "Login",
+    notMember: "Not a member yet?",
+    createAccount: "Create an account",
+    errorEmailRequired: "Email is required",
+    errorInvalidEmail: "Invalid email address",
+    errorPasswordRequired: "Password is required",
+    errorPasswordLength: "Password must be at least 6 characters",
+    alertSuccess: "Login successful!"
+  },
+  ar: {
+    title: "تسجيل الدخول",
+    subtitle: "مرحباً بعودتك! يرجى تسجيل الدخول للمتابعة.",
+    emailLabel: "البريد الإلكتروني",
+    emailPlaceholder: "البريد الإلكتروني",
+    passwordLabel: "كلمة المرور",
+    passwordPlaceholder: "كلمة المرور",
+    forgotPassword: "هل نسيت كلمة المرور؟",
+    loginButton: "دخول",
+    notMember: "ألست عضواً بعد؟",
+    createAccount: "أنشئ حساباً جديداً",
+    errorEmailRequired: "البريد الإلكتروني مطلوب",
+    errorInvalidEmail: "صيغة البريد الإلكتروني غير صالحة",
+    errorPasswordRequired: "كلمة المرور مطلوبة",
+    errorPasswordLength: "يجب أن تتكون كلمة المرور من 6 أحرف على الأقل",
+    alertSuccess: "تم تسجيل الدخول بنجاح!"
+  }
+};
+
+  // متغير الوصول للنصوص
+  const t = translations[language];
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -20,15 +62,15 @@ const LoginPage = () => {
     const newErrors = {};
 
     if (!email) {
-      newErrors.email = "البريد الإلكتروني مطلوب";
+      newErrors.email = t.errorEmailRequired;
     } else if (!validateEmail(email)) {
-      newErrors.email = "البريد الإلكتروني غير صحيح";
+      newErrors.email = t.errorInvalidEmail;
     }
 
     if (!password) {
-      newErrors.password = "كلمة المرور مطلوبة";
+      newErrors.password = t.errorPasswordRequired;
     } else if (password.length < 6) {
-      newErrors.password = "كلمة المرور يجب أن تكون 6 أحرف على الأقل";
+      newErrors.password = t.errorPasswordLength;
     }
 
     if (Object.keys(newErrors).length > 0) {
@@ -36,12 +78,12 @@ const LoginPage = () => {
     } else {
       setErrors({});
       console.log("Login successful:", { email, password });
-      alert("تم تسجيل الدخول بنجاح!");
+      alert(t.alertSuccess);
     }
   };
 
   return (
-    <div className="login-page">
+    <div className="login-page" dir={language === "ar" ? "rtl" : "ltr"}>
       {/* Language Toggle */}
       <div className="language-toggle-top">
         <button
@@ -61,11 +103,9 @@ const LoginPage = () => {
       </div>
 
       {/* Logo Header */}
-      <div className="top-logo-header">
-        <Link to="/" className="top-logo-link">
-          <div className="top-logo-icon">e</div>
-          <span className="top-logo-text">Patroit</span>
-        </Link>
+      <div className="top-logo-left">
+              <img src={logo} alt="Patroit Logo" className="top-logo-logo" />
+              <span className="top-logo-title">Patroit </span>
       </div>
 
       {/* Decorative elements */}
@@ -81,20 +121,20 @@ const LoginPage = () => {
       <div className="login-container">
         <div className="login-card">
           <div className="login-body">
-            <h2 className="login-title">Login</h2>
-            <p className="login-subtitle">Welcome back! Please log in to continue.</p>
+            <h2 className="login-title">{t.title}</h2>
+            <p className="login-subtitle">{t.subtitle}</p>
 
             <form onSubmit={handleSubmit} className="login-form">
               <div className="form-group">
                 <label htmlFor="email" className="form-label">
-                  Email
+                  {t.emailLabel} 
                 </label>
                 <div className="input-wrapper">
                   <FaEnvelope className="input-icon" />
                   <input
                     type="email"
                     id="email"
-                    placeholder="Email"
+                    placeholder={t.emailPlaceholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className={`form-input ${errors.email ? "input-error" : ""}`}
@@ -105,14 +145,14 @@ const LoginPage = () => {
 
               <div className="form-group">
                 <label htmlFor="password" className="form-label">
-                  Password
+                  {t.passwordLabel} 
                 </label>
                 <div className="input-wrapper">
                   <FaLock className="input-icon" />
                   <input
                     type={showPassword ? "text" : "password"}
                     id="password"
-                    placeholder="Password"
+                    placeholder={t.passwordPlaceholder}
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className={`form-input ${errors.password ? "input-error" : ""}`}
@@ -130,18 +170,18 @@ const LoginPage = () => {
 
               <div className="forgot-password">
                 <Link to="/forgot-password" className="forgot-link">
-                  Forgot your password?
+                  {t.forgotPassword}
                 </Link>
               </div>
 
               <button type="submit" className="login-button">
-                Login
+                {t.loginButton}
               </button>
 
               <div className="signup-prompt">
-                <span>Not a member yet? </span>
+                <span>{t.notMember} </span>
                 <Link to="/signup" className="signup-link">
-                  Create an account
+                  {t.createAccount}
                 </Link>
               </div>
             </form>
