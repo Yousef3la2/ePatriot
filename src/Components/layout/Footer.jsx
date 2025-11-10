@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png";
+import "./Footer.css";
 import {
   FaEnvelope,
   FaPhone,
@@ -10,16 +11,17 @@ import { FaSquareWhatsapp } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 
+
 const Footer = () => {
   return (
     <>
       {/* Contact Section - White Background */}
-      <div style={{
+      <div className="footer-contact-section" style={{
         background: 'white',
         padding: '30px 80px',
         borderTop: '1px solid #e5e7eb'
       }}>
-        <div style={{
+        <div className="footer-contact-container" style={{
           marginRight: '100px',
           display: 'flex',
           justifyContent: 'space-between',
@@ -29,7 +31,7 @@ const Footer = () => {
           gap: '40px'
         }}>
           {/* Contact us via email */}
-          <div style={{ flex: 1 }}>
+          <div className="footer-contact-item" style={{ flex: 1 }}>
             <p style={{ fontSize: '13px', color: '#6b7280', margin: '0 0 4px 0' }}>
               Contact us via email at
             </p>
@@ -38,8 +40,9 @@ const Footer = () => {
             </p>
           </div>
 
+
           {/* Call us at */}
-          <div style={{ flex: 1 }}>
+          <div className="footer-contact-item" style={{ flex: 1 }}>
             <p style={{ fontSize: '13px', color: '#6b7280', margin: '0 0 4px 0' }}>
               Call us at
             </p>
@@ -48,8 +51,9 @@ const Footer = () => {
             </p>
           </div>
 
+
           {/* Chat with us button */}
-          <button style={{
+          <button className="footer-chat-button" style={{
             background: 'white',
             color: '#FF8C00',
             border: '2px solid #FF8C00',
@@ -69,13 +73,14 @@ const Footer = () => {
         </div>
       </div>
 
+
       {/* Footer - Blue Background */}
-      <footer style={{
+      <footer className="footer-main" style={{
         background: '#0066FF',
         padding: '40px 80px',
         width: '100%'
       }}>
-        <div style={{
+        <div className="footer-main-container" style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start',
@@ -84,45 +89,45 @@ const Footer = () => {
           gap: '80px'
         }}>
           {/* Left: Logo and Social */}
-          <div style={{ flex: '0 0 auto', maxWidth: '250px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
-              <img src={logo} alt="ePatroit Logo" style={{ width: '35px', height: '35px', borderRadius: '8px' }} />
-              <span style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Patroit</span>
+          <div className="footer-brand-section" style={{ flex: '0 0 auto', maxWidth: '250px' }}>
+            <div className="footer-brand-header" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
+              <img src={logo} alt="ePatroit Logo" className="footer-logo" style={{ width: '35px', height: '35px', borderRadius: '8px' }} />
+              <span className="footer-brand-name" style={{ fontSize: '24px', fontWeight: 'bold', color: 'white' }}>Patroit</span>
             </div>
-            <p style={{ fontSize: '14px', color: 'white', margin: '0 0 20px 0', lineHeight: 1.5 }}>
+            <p className="footer-tagline" style={{ fontSize: '14px', color: 'white', margin: '0 0 20px 0', lineHeight: 1.5 }}>
               Keep your children safe online.
             </p>
-            
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+           
+            <div className="footer-social-links" style={{ display: 'flex', gap: '12px' }}>
+              <a href="#" className="footer-social-icon" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
                 <FaSquareWhatsapp />
               </a>
-              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+              <a href="#" className="footer-social-icon" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
                 <FaLinkedin />
               </a>
-              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+              <a href="#" className="footer-social-icon" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
                 <FaInstagramSquare />
               </a>
-              <a href="#" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
+              <a href="#" className="footer-social-icon" style={{ color: 'white', fontSize: '24px', textDecoration: 'none' }}>
                 <FaSquareFacebook />
               </a>
             </div>
           </div>
 
+
           {/* Right: Links Columns */}
-          <div style={{ 
-            display: 'flex', 
-            gap: '80px', 
+          <div className="footer-links-section" style={{
+            display: 'flex',
+            gap: '80px',
             flex: 1,
-            justifyContent: 'flex-end',
-            marginRight: '300px'
+            justifyContent: 'flex-end'
           }}>
             {/* Legal */}
-            <div>
-              <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
+            <div className="footer-links-column">
+              <h4 className="footer-column-title" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
                 Legal
               </h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <ul className="footer-column-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: '12px' }}>
                   <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
                     Terms of Service
@@ -141,12 +146,13 @@ const Footer = () => {
               </ul>
             </div>
 
+
             {/* Resources */}
-            <div>
-              <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
+            <div className="footer-links-column">
+              <h4 className="footer-column-title" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
                 Resources
               </h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <ul className="footer-column-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: '12px' }}>
                   <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
                     Help Center
@@ -170,12 +176,13 @@ const Footer = () => {
               </ul>
             </div>
 
+
             {/* Quick Links */}
-            <div>
-              <h4 style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
+            <div className="footer-links-column">
+              <h4 className="footer-column-title" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
                 Quick Links
               </h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+              <ul className="footer-column-list" style={{ listStyle: 'none', padding: 0, margin: 0 }}>
                 <li style={{ marginBottom: '12px' }}>
                   <a href="#" style={{ color: 'white', textDecoration: 'none', fontSize: '15px' }}>
                     About Us
@@ -199,5 +206,6 @@ const Footer = () => {
     </>
   );
 };
+
 
 export default Footer;

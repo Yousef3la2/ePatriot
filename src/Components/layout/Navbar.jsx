@@ -3,10 +3,12 @@ import { SlArrowDown } from "react-icons/sl";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
+
 const Navbar = () => {
   const [showCategories, setShowCategories] = useState(false);
   const [showOurStory, setOurStory] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   return (
     <nav className={`navbar-container ${isMenuOpen ? "menu-active" : ""}`}>
@@ -14,12 +16,6 @@ const Navbar = () => {
         <img src={logo} alt="Patroit Logo" className="navbar-logo" />
         <span className="navbar-title">Patroit </span>
       </div>
-      <button
-        className="burger-menu"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        ☰
-      </button>
       <div className="navbar-center">
         <ul className="navbar-ul">
           <li>
@@ -73,6 +69,16 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+          <li className="mobile-auth-buttons">
+            <Link to="/login" className="login-btn">
+              Login
+            </Link>
+          </li>
+          <li className="mobile-auth-buttons">
+            <Link to="/signup" className="signup-btn">
+              Signup
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="navbar-right">
@@ -80,11 +86,18 @@ const Navbar = () => {
           Login
         </Link>
         <Link to="/signup" className="signup-btn">
-          Sign Up
+          Signup
         </Link>
       </div>
+      <button
+        className="burger-menu"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
+        ☰
+      </button>
     </nav>
   );
 };
+
 
 export default Navbar;

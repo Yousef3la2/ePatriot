@@ -8,8 +8,8 @@ const FAQItem = ({ faq, isActive, onToggle }) => {
           <span>{faq.question}</span>
           <div className={`faq-question-arrow ${isActive ? "open" : ""}`}>
             <svg
-              width="24"
-              height="24"
+              width="28"
+              height="28"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -33,4 +33,6 @@ const FAQItem = ({ faq, isActive, onToggle }) => {
   );
 };
 
+
 export default FAQItem;
+
