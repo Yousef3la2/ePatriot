@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUser, FaCheckCircle } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import "./SignUpPage.css";
+import "../layout/SignUpPage.css";
 import ParentsImg from "../../assets/Landing Page/Section 2/Parents.png";
 import TeachersImg from "../../assets/Landing Page/Section 2/Teachers.png";
 import TeenagersImg from "../../assets/Landing Page/Section 2/Teenagers.png";

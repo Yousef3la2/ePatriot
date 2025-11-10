@@ -65,14 +65,14 @@
 }
 
 /* Top Logo Header */
-.navbar-title {
+.top-logo-title {
   font-size: 20px;
   font-weight: bold;
   color: #222;
   font-weight: bold;
 }
 
-.navbar-left {
+.top-logo-left {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -81,7 +81,7 @@
   align-items: center;
   gap: 10px;
 }
-.navbar-logo {
+.top-logo-logo {
   width: 40px;
   height: 40px;
   border-radius: 10px;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import "./LoginPage.css";
 import logo from "../../assets/logo.png";
+import "../layout/LoginPage.css";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -11,7 +11,6 @@ const LoginPage = () => {
   const [errors, setErrors] = useState({});
   const [language, setLanguage] = useState("en");
 
-  // تعريف كائن النصوص (نقله من الأعلى)
   const translations = {
   en: {
     title: "Login",
@@ -49,7 +48,7 @@ const LoginPage = () => {
   }
 };
 
-  // متغير الوصول للنصوص
+ 
   const t = translations[language];
 
   const validateEmail = (email) => {
