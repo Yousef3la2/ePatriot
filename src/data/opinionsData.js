@@ -1,4 +1,4 @@
-import avatar from "../assets/Landing Page/Section 4/avatar.jpg";
+import avatar from "../assets/Landing Page/Section 4/avatar.png";
 
 export const opinionsData = [
   {
