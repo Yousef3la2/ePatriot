@@ -69,7 +69,7 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <li className="mobile-auth-buttons">
+          {/* <li className="mobile-auth-buttons">
             <Link to="/login" className="login-btn">
               Login
             </Link>
@@ -78,17 +78,17 @@ const Navbar = () => {
             <Link to="/signup" className="signup-btn">
               Signup
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
-      <div className="navbar-right">
+      {/* <div className="navbar-right">
         <Link to="/login" className="login-btn">
           Login
         </Link>
         <Link to="/signup" className="signup-btn">
           Signup
         </Link>
-      </div>
+      </div> */}
       <button
         className="burger-menu"
         onClick={() => setIsMenuOpen(!isMenuOpen)}

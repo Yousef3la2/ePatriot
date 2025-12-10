@@ -17,7 +17,24 @@ const CourseCard = ({ course }) => {
           {course.tag}
         </span>
         <img src={course.image} alt={course.title} className="course-img" />
-        <div className="discount-badge">{course.discount}</div>
+        <div className="discount-badge">
+  <svg
+    width="60"
+    height="60"
+    viewBox="0 0 60 60"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="discount-svg"
+  >
+    <path
+      d="M57.3404 14.6606C43.6396 20.8758 34.1057 15.616 34.2553 0C31.2641 16.2039 20.5539 20.4169 6.75532 12.2715C18.536 23.3394 14.3813 34.1502 0 39.5294C15.4074 36.9756 24.3188 43.9946 24.8404 60C31.7648 43.2653 43.8041 38.6705 60 46.0995C45.6686 37.2392 42.6906 24.7064 57.3404 14.6606Z"
+      fill="#FF8000"
+    />
+  </svg>
+
+  <span className="discount-text">{course.discount}</span>
+</div>
+
       </div>
 
       <div className="course-info">
