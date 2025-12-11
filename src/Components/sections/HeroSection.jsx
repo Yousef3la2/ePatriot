@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div className="hero-section">
       <div className="left-part">
         <h1 className="hero-heading">
-          Teach online <span className="hero-safety-word">safety</span> with
+          Teach online <span className="hero-safety-word">safety</span><br />with
           simple and interactive steps
         </h1>
         <p className="hero-desc">
