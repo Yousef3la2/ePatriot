@@ -1256,159 +1256,114 @@ body, html {
   font-size: 30px;
   margin-top: 3px;
 }
+
 .faq-section {
   padding: 80px 0;
-  background-color: #f0f5ff;
-  margin: 0 auto;
+  background-color: #EDF3FF; 
+  min-height: 100vh;
 }
 
-
-.faq-heading {
+ .faq-heading {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
   color: #002B80;
   margin-bottom: 50px;
-}
-
+} 
 
 .faq-container {
-  border-radius: 12px;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 
 .faq-item {
   background: white;
-  border-radius: 12px;
-  margin-bottom: 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
   overflow: hidden;
-  transition: all 0.3s ease;
-  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+  border: 1px solid transparent; 
 }
 
-
-.faq-border-wrapper {
-  position: relative;
-  padding: 2px;
-  border-radius: 12px;
-  background: transparent;
-  transition: all 0.3s ease;
+.faq-item.active {
+  background: #0055FF; 
+  box-shadow: 0 8px 25px rgba(0, 85, 255, 0.3);
 }
-
-
-.faq-item.active .faq-border-wrapper {
-  background: linear-gradient(90deg, #5c9dbb, #00ddff, #00ff88, #5c9dbb);
-  background-size: 300%;
-  animation: moveGradient 5s linear infinite;
-}
-
 
 .faq-question {
-  padding: 20px 24px;
+  width: 100%;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
-  background: white;
+  background: transparent;
   border: none;
-  width: 100%;
+  cursor: pointer;
   text-align: left;
+}
+
+.question-text {
   font-size: 18px;
   font-weight: 600;
-  color: #333;
-  transition: background-color 0.3s ease;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  color: #333; 
+  transition: color 0.3s ease;
 }
 
-
-.faq-question:hover {
-  background-color: #f8f9fa;
+.faq-item.active .question-text {
+  color: white; 
 }
 
-
-.faq-arrow {
-  width: 20px;
-  height: 20px;
-  transition: transform 0.3s ease;
-  color: #002B80;
+.faq-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
   flex-shrink: 0;
   margin-left: 15px;
-  border-radius: 30%;
-  padding: 4px;
-  background: linear-gradient(270deg, #5c9dbb, #00ddff);
-  background-size: 400% 400%;
-  animation: gradientMove 3s ease infinite;
-  color: white;
+  
+  background-color: #0055FF;
 }
 
-
-.faq-arrow.open {
-  transform: rotate(180deg);
+.faq-item.active .faq-icon-wrapper {
+  background-color: white;
+  transform: rotate(180deg); 
 }
 
+.arrow-svg path {
+  transition: fill 0.3s ease;
+  fill: white; 
+}
+
+.faq-item.active .arrow-svg path {
+  fill: #0055FF; 
+}
 
 .faq-answer {
-  padding: 0 24px;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
-  background: white;
-  color: #666;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+  opacity: 0;
+  padding: 0 30px; 
+}
+
+.faq-answer.open {
+  max-height: 500px; 
+  opacity: 1;
+  padding: 0 30px 30px 30px;
+}
+
+.faq-answer p {
+  color: #e0e0e0;
   line-height: 1.6;
+  margin: 0;
   font-size: 16px;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
-
-
-.faq-answer.open {
-  padding: 0 24px 24px;
-  max-height: 500px;
-}
-
-
-.faq-answer.open {
-  animation: fadeIn 0.3s ease;
-}
-
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 300% 50%;
-  }
-}
-
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 
 @media (max-width: 768px) {
   .faq-section {
@@ -1460,13 +1415,7 @@ body, html {
 }
 
 
-.faq-item {
-  background-color: #ffffff10;
-  border-radius: 12px;
-  margin-bottom: 12px;
-  padding: 15px 20px;
-  transition: background 0.6s ease, transform 0.3s ease;
-}
+
 
 
 .faq-item.active {

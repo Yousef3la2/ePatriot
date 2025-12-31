@@ -11,7 +11,7 @@ const FAQSection = () => {
 
   return (
     <section className="faq-section">
-      <h2 className="faq-heading">Frequently Asked Questions</h2>
+      <h2 className="faq-heading">Why choose ePatriot?</h2>
       <div className="faq-container">
         {faqData.map((faq, index) => (
           <FAQItem
