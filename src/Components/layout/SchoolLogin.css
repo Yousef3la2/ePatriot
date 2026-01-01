@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+
+
+body {
+  margin: 0;
+  background-color: #f8f9fb; /* Light background */
+}
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px);
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 500px;
+  background: transparent;
+}
+
+/* Tabs */
+.tabs-header {
+  display: flex;
+  width: 100%;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 18px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.inactive {
+  background-color: #f0f0f0;
+  color: #333;
+  border-top-left-radius: 12px;
+}
+
+.tab-btn.active {
+  background-color: #ff8c00; /* Orange Color */
+  color: white;
+  border-top-right-radius: 12px;
+}
+
+/* Form Card */
+.form-card {
+  background: white;
+  padding: 40px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft Shadow */
+  text-align: center;
+}
+
+.form-title {
+  margin: 0 0 10px 0;
+  color: #000;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.form-subtitle {
+  margin: 0 0 30px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.login-form {
+  text-align: left;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: #1a3b5d; /* Dark Blue Text */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Custom Select Dropdown Styling */
+.custom-select-container {
+  position: relative;
+  width: 100%;
+}
+
+.select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 15px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  height: 52px; /* Fixed height for consistency */
+}
+
+.select-trigger:hover,
+.select-trigger.open {
+  border-color: #ff8c00; /* Highlight on hover/open */
+}
+
+.trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.selected-text {
+  color: #a6a6a6; /* Placeholder color */
+  font-size: 15px;
+}
+
+.selected-text.active {
+  color: #333; /* Selected text color */
+}
+
+.arrow-wrapper {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.arrow-wrapper.rotated {
+  transform: rotate(180deg);
+}
+
+/* The Dropdown Menu List */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px); /* Gap between input and list */
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Stronger shadow for floating effect */
+  z-index: 100;
+  padding: 8px 0;
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #f0f0f0;
+}
+
+.dropdown-item {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f7fa;
+}
+
+.school-list-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; /* Circle image */
+  object-fit: cover;
+  background-color: #eee;
+}
+
+/* Password Styling */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 12px 45px; /* Space for icons */
+  height: 52px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.custom-input:focus {
+  border-color: #007bff;
+}
+
+.custom-input::placeholder {
+  color: #a6a6a6;
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper.left {
+  position: absolute;
+  left: 15px;
+  pointer-events: none;
+}
+
+.icon-wrapper.right {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff; /* Bright Blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}

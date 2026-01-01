@@ -1,0 +1,300 @@
+/* Container Background */
+.school-page-container {
+  background-color: #f8f9fb;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* Header Section */
+.school-header {
+  background: #1280FE;
+  color: white;
+  text-align: center;
+  padding: 20px 20px 100px 20px; /* Padding bottom increased to allow cards overlap */
+  position: relative;
+  z-index: 1;
+}
+
+.school-header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: -30px;
+}
+
+.school-header p {
+  font-size: 24px;
+  opacity: 0.9;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: -60px; /* Pull content up to overlap header */
+}
+
+/* Action Cards (Top Row) */
+.action-cards-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.action-card {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 0 0 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 40px 30px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.card-icon svg {
+  width: 40px;
+  height: 40px;
+  
+}
+
+.card-icon.blue-bg {
+  background-color: #0055FF;
+}
+
+.card-icon.orange-bg {
+  background-color: #FF8C00;
+}
+
+.action-card h3 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 0px;
+  font-weight: 700;
+}
+
+.action-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.card-link {
+  width: 100%;
+  background-color: #F7F7F7;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 15px 0;
+  display: block;
+  transition: background 0.3s ease;
+  margin-bottom: 0;
+  display: flex;           
+  justify-content: center; 
+  align-items: center;    
+  gap: 10px;
+}
+
+.card-link:hover {
+  background-color: #eee;
+  color: #0056b3;
+}
+
+/* Info Sections */
+.info-section {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  font-size: 28px;
+  color: #000;
+  font-weight: 700;
+  margin: 0;
+}
+
+.see-all {
+  font-size: 19px;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* List Items (Curriculums & Recent Activity) */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.item-icon {
+  width: 58px;
+  height: 58px;
+  background: #eff4ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007bff;
+}
+.item-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.item-text {
+  font-size: 20px;
+  color: #333;
+  font-weight: 500;
+}
+
+.item-link {
+  font-size: 19px;
+  color: #007bff;
+  text-decoration: none;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.item-time {
+  font-size: 18px;
+  color: #999;
+  white-space: nowrap;
+}
+
+/* Teacher Notes Specific */
+.note-card {
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+}
+.note-card:last-child { border-bottom: none; }
+
+.note-avatar-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-avatar-col img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block; 
+}
+
+.note-content-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.note-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.note-header-row h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+.note-text {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+
+}
+
+.note-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.note-profile img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.note-profile h4 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.note-date {
+  font-size: 18px;
+  color: #999;
+}
+
+.note-body {
+  font-size: 20px;
+  color: #555;
+  line-height: 1.5;
+  margin-left: 50px; /* Align text with name, below image */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .action-cards-container {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,76 @@
+.school-navbar {
+  background-color: #ffffff;
+  padding: 15px 0;
+  width: 100%;
+}
+
+.navbar-container-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-avatar-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #FF8C00; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.user-avatar-circle svg {
+  width: 32px;
+  height: 32px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.user-role {
+  font-size: 13px;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-school-section {
+  display: flex;
+  align-items: center;
+}
+
+.school-logo-circle {
+  width: 70px; 
+  height: 70px;
+  background-color: #FFD700; 
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  font-size: 10px; 
+  font-weight: bold;
+  color: #000;
+  line-height: 1.2;
+}
+
