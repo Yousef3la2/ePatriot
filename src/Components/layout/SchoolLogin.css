@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background-color: #f8f9fb; /* Light background */
+  background-color: #f8f9fb; 
 }
 
 .login-wrapper {
@@ -26,7 +26,7 @@ body {
   background: transparent;
 }
 
-/* Tabs */
+
 .tabs-header {
   display: flex;
   width: 100%;
@@ -49,18 +49,18 @@ body {
 }
 
 .tab-btn.active {
-  background-color: #ff8c00; /* Orange Color */
+  background-color: #ff8c00; 
   color: white;
   border-top-right-radius: 12px;
 }
 
-/* Form Card */
+
 .form-card {
   background: white;
   padding: 40px;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Soft Shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
   text-align: center;
 }
 
@@ -81,7 +81,7 @@ body {
   text-align: left;
 }
 
-/* Input Groups */
+
 .input-group {
   margin-bottom: 25px;
 }
@@ -89,12 +89,12 @@ body {
 .input-group label {
   display: block;
   font-size: 14px;
-  color: #1a3b5d; /* Dark Blue Text */
+  color: #1a3b5d; 
   font-weight: 600;
   margin-bottom: 8px;
 }
 
-/* Custom Select Dropdown Styling */
+
 .custom-select-container {
   position: relative;
   width: 100%;
@@ -111,12 +111,12 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: border-color 0.3s ease;
-  height: 52px; /* Fixed height for consistency */
+  height: 52px; 
 }
 
 .select-trigger:hover,
 .select-trigger.open {
-  border-color: #ff8c00; /* Highlight on hover/open */
+  border-color: #ff8c00; 
 }
 
 .trigger-left {
@@ -126,12 +126,12 @@ body {
 }
 
 .selected-text {
-  color: #a6a6a6; /* Placeholder color */
+  color: #a6a6a6; 
   font-size: 15px;
 }
 
 .selected-text.active {
-  color: #333; /* Selected text color */
+  color: #333; 
 }
 
 .arrow-wrapper {
@@ -144,15 +144,15 @@ body {
   transform: rotate(180deg);
 }
 
-/* The Dropdown Menu List */
+
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 8px); /* Gap between input and list */
+  top: calc(100% + 8px); 
   left: 0;
   width: 100%;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Stronger shadow for floating effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
   z-index: 100;
   padding: 8px 0;
   max-height: 250px;
@@ -178,12 +178,12 @@ body {
 .school-list-logo {
   width: 24px;
   height: 24px;
-  border-radius: 50%; /* Circle image */
+  border-radius: 50%; 
   object-fit: cover;
   background-color: #eee;
 }
 
-/* Password Styling */
+
 .password-wrapper {
   position: relative;
   display: flex;
@@ -193,7 +193,7 @@ body {
 
 .custom-input {
   width: 100%;
-  padding: 12px 45px; /* Space for icons */
+  padding: 12px 45px; 
   height: 52px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -231,18 +231,17 @@ body {
   padding: 0;
 }
 
-/* Submit Button */
+
 .submit-btn {
+  height: 50px;
   width: 100%;
-  padding: 14px;
-  background-color: #007bff; /* Bright Blue */
+  background-color: #007bff; 
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 10px;
   transition: background 0.3s;
 }
 

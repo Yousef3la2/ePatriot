@@ -1,17 +1,17 @@
-/* Footer Main */
+
 .footer-main-container img {
   max-width: 35px !important;
   max-height: 35px !important;
 }
 
-/* Ensure footer links stay on one line */
+
 .footer-column-list li a {
   white-space: nowrap !important;
   display: inline-block !important;
 }
 
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .footer-contact-section {
     padding: 20px !important;

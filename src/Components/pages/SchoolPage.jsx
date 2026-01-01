@@ -15,19 +15,19 @@ const SchoolPage = () => {
       <SchoolNavbar />
       <div className="school-page-container">
         
-        {/* Header Section */}
+        
         <header className="school-header">
-            {/* Sparkles or decorative SVGs can go here in CSS background */}
+            
           <div className="header-content">
             <h1>School Management Center</h1>
             <p>Managing teachers and assigning customized content to them in simple steps</p>
           </div>
         </header>
 
-        {/* Main Content Area */}
+        
         <div className="content-wrapper">
           
-          {/* Top Actions Cards */}
+          
           <div className="action-cards-container">
             <div className="action-card">
                 <div className="card-content">
@@ -53,7 +53,7 @@ const SchoolPage = () => {
             </div>
           </div>
 
-          {/* Curriculums Section */}
+          
           <section className="info-section">
             <div className="section-header">
               <h2>Curriculums</h2>
@@ -72,7 +72,7 @@ const SchoolPage = () => {
             </div>
           </section>
 
-          {/* Teacher's Notes Section */}
+          
           <section className="info-section">
             <div className="section-header">
               <h2>Teacher's Notes</h2>
@@ -96,7 +96,7 @@ const SchoolPage = () => {
             </div>
           </section>
 
-          {/* Recent Activity Section */}
+          
           <section className="info-section">
             <div className="section-header">
               <h2>Recent Activity</h2>

@@ -464,10 +464,10 @@ body, html {
   position: relative;
   width: 18%;
   background: #fff;
-  /* border: 1px solid #e0e0e0; */
+  
   border-radius: 25px;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-  border: none; /* <--- إزالة الحد */
+  
+  border: none; 
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   text-align: center;
   padding: 200px 20px 20px;
@@ -636,25 +636,15 @@ body, html {
   inset: 0;
   border-radius: 20px;
   padding: 2px;
-  /* background: linear-gradient(90deg, #00ddff, #00ff88, #00ddff); */
+  
   background-size: 300%;
   animation: moveGradient 5s linear infinite;
-  /* -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); */
+  
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   z-index: -1;
   transition: 0.3s ease;
 }
-
-
-/* .main-btn:hover {
-  color: #fff;
-  transform: scale(1.05);
-  background: linear-gradient(90deg, #5c9dbb, #00ddff, #00ff88, #5c9dbb);
-  background-size: 300%;
-  animation: moveGradient 10s linear infinite;
-} */
-
 
 .main-card:nth-child(1) .main-btn {
   color: #FD8002;
@@ -776,7 +766,7 @@ body, html {
 
 
 .why-title {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   color: #222;
   margin-bottom: 6px;
@@ -785,7 +775,7 @@ body, html {
 
 .why-desc {
   color: #666;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
 }
 
@@ -1082,179 +1072,231 @@ body, html {
 .register-btn:hover {
   background-color: #1280FE;
 }
+
+
 .opinions-section {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  /* background: linear-gradient(135deg, #04318b, #002B80); */
-  padding: 0 10px;
-  color: #fff;
+  align-items: center; 
+  padding: 50px 5%; 
+  background-color: #fff; 
   overflow: hidden;
-  gap: 10px;
+  gap: 50px; 
+
+  margin: 0 auto;
 }
 
 
 .opinions-left {
+  
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center; 
+  text-align: center;     
+  
   flex: 1;
-  max-width: 40%;
+  max-width: 500px;
   position: relative;
+  z-index: 2;
+  margin: 0 auto; 
 }
-
 
 .opinions-left h2 {
   color: #002B80;
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 45px;
-  display: flex;
-  justify-content: center;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  width: 100%; 
 }
-.opinions-left h4 {
-  display: flex;
-  justify-content: center;
-  width: 200px;
-}
+
+
 .opinions-tag {
-  background-color: #ff7b00;
-  padding: 8px 10px;
+  background-color: #ff8c00;
+  color: white;
+  padding: 12px 24px;
   border-radius: 50px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 18px;
-  margin: auto;
-  margin-bottom: 25px;
-  width: 250px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+  
 }
 
 
 .opinions-desc {
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.8;
   color: #1280FE;
+  font-weight: 500;
+  
 }
-
 
 .opinions-decor {
   position: absolute;
-  bottom: -250px;
-  left: 0;
-  width: 300px;
-  opacity: 0.6;
+  bottom: -330px;
+  right: 60px;
+  animation: float 4s ease-in-out infinite;
 }
 
 
 .opinions-right {
+  flex: 1;
   display: flex;
-  gap: 25px;
-  overflow: hidden;
-  max-height: 500px;
+  gap: 20px;
+  height: 600px;
+  overflow: hidden; 
   position: relative;
+  
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  
+  
+  padding: 0 10px; 
 }
-
 
 .column {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  will-change: transform;
+  width: 50%;
+  
+  
+  
+  padding: 15px; 
 }
 
 
 .column-up {
-  animation-name: scroll-up;
+  animation: scrollUp 10s linear infinite;
 }
-
 
 .column-down {
-  animation-name: scroll-down;
+  animation: scrollDown 10s linear infinite;
 }
 
-
-.column:hover {
+.opinions-right:hover .column {
   animation-play-state: paused;
 }
 
-
-@keyframes scroll-up {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); } 
 }
 
-
-@keyframes scroll-down {
-  0% {
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); } 
+  100% { transform: translateY(0); }
 }
 
-
-
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(10deg); }
+}
 
 .opinion-card {
-  background-color: #34ACFF;
+  background-color: #34ACFF; 
   color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  min-height: 160px;
-  flex-shrink: 0;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(64, 169, 255, 0.2);
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+  
+  
+  position: relative;
 }
 
+.opinion-card:hover {
+  
+  transform: scale(1.05); 
+  z-index: 10; 
+}
 
 .opinion-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
+.opinion-header img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: white; 
+  margin-right: 12px;
+}
 
+.opinion-header div {
+  flex: 1;
+  text-align: left;
+}
 
 .opinion-header h4 {
   color: #FFF;
-  font-size: 14px;
-  margin: 0;
-  font-weight: bold;
+  font-size: 15px;
+  margin: 0 0 4px 0;
+  font-weight: 700;
 }
-
 
 .opinion-header span {
   font-size: 12px;
-  color: #000;
+  color: #404040; 
+  display: block;
 }
-
-
 .date {
-  font-size: 12px;
-  color: #000;
+  font-size: 11px;
+  color: #404040; 
 }
-
 
 .opinion-body {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
+  position: relative;
+  text-align: left;
 }
 
-
 .quote-icon {
-  color: #ff7b00;
-  font-size: 30px;
-  margin-top: 3px;
+  width: 24px; 
+  margin-bottom: 8px;
+  display: block;
+  
+  
+  
+  filter: brightness(0) saturate(100%) invert(66%) sepia(35%) saturate(5422%) hue-rotate(360deg) brightness(101%) contrast(106%);
+}
+.opinion-body p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .opinions-section {
+    flex-direction: column;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .opinions-left {
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .opinions-left h2 {
+    font-size: 32px;
+  }
+
+  .opinions-right {
+    width: 100%;
+    height: 500px;
+  }
 }
 
 .faq-section {
@@ -1272,8 +1314,7 @@ body, html {
 } 
 
 .faq-container {
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 80px;
   padding: 0 20px;
 }
 
@@ -1289,7 +1330,7 @@ body, html {
 }
 
 .faq-item.active {
-  background: #0055FF; 
+  background: #1280FE; 
   box-shadow: 0 8px 25px rgba(0, 85, 255, 0.3);
 }
 
@@ -1306,7 +1347,7 @@ body, html {
 }
 
 .question-text {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 600;
   color: #333; 
   transition: color 0.3s ease;
@@ -1327,7 +1368,7 @@ body, html {
   flex-shrink: 0;
   margin-left: 15px;
   
-  background-color: #0055FF;
+  background-color: #1280FE;
 }
 
 .faq-item.active .faq-icon-wrapper {
@@ -1362,7 +1403,7 @@ body, html {
   color: #e0e0e0;
   line-height: 1.6;
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {
@@ -2792,7 +2833,7 @@ body, html {
 }
 
 
-/* NEW FOOTER DESIGN - OVERRIDE ALL OLD STYLES */
+
 footer.footer-section {
   background: white !important;
   padding: 0 !important;

@@ -138,7 +138,7 @@ const SignUpPage = () => {
 
   return (
     <div className="signup-page">
-      {/* Language Toggle */}
+      
       <div className="language-toggle-top">
         <button
           className={`lang-btn ${language === "en" ? "active" : ""}`}
@@ -156,7 +156,7 @@ const SignUpPage = () => {
         </button>
       </div>
 
-      {/* Logo Header */}
+      
       <div className="top-logo-header">
         <Link to="/" className="top-logo-link">
           <div className="top-logo-icon">e</div>
@@ -164,7 +164,7 @@ const SignUpPage = () => {
         </Link>
       </div>
 
-      {/* Decorative elements */}
+      
       <div className="decoration decoration-top-left"></div>
       <div className="decoration decoration-top-right"></div>
       <div className="decoration decoration-bottom-left"></div>
@@ -177,7 +177,7 @@ const SignUpPage = () => {
       <div className="signup-container">
         <div className="signup-card">
           <div className="signup-body">
-            {/* Progress Steps */}
+            
             <div className="progress-steps">
               <div className={`step ${currentStep >= 1 ? "active" : ""} ${currentStep > 1 ? "completed" : ""}`}>
                 <div className="step-circle">
@@ -206,7 +206,7 @@ const SignUpPage = () => {
               </div>
             </div>
 
-            {/* Step 1: Category Selection */}
+            
             {currentStep === 1 && (
               <div className="step-content category-selection">
                 <h2 className="category-main-title">Choose the category you want to enter</h2>
@@ -247,7 +247,7 @@ const SignUpPage = () => {
               </div>
             )}
 
-            {/* Step 2: Enter Data */}
+            
             {currentStep === 2 && (
               <div className="step-content">
                 <h2 className="signup-title">Create a new account</h2>
@@ -354,7 +354,7 @@ const SignUpPage = () => {
               </div>
             )}
 
-            {/* Step 3: Confirm Code */}
+            
             {currentStep === 3 && (
               <div className="step-content">
                 <h2 className="signup-title">Confirm verification code</h2>
@@ -453,13 +453,13 @@ const SignUpPage = () => {
               </div>
             )}
 
-            {/* Step 4: Customize Experience */}
+            
             {currentStep === 4 && (
               <div className="step-content">
                 <h2 className="customize-title">Let's customize your experience.</h2>
                 <p className="customize-subtitle">Answer a few quick questions to help us serve you better.</p>
 
-                {/* Progress Bar */}
+                
                 <div className="question-progress">
                   <div className={`progress-dot ${customizePage >= 1 ? "active" : ""}`}></div>
                   <div className="progress-line"></div>
@@ -471,7 +471,7 @@ const SignUpPage = () => {
                 </div>
 
                 <form className="customize-form">
-                  {/* Page 1: Children Count and Ages */}
+                  
                   {customizePage === 1 && (
                     <>
                       <div className="form-section">
@@ -526,7 +526,7 @@ const SignUpPage = () => {
                     </>
                   )}
 
-                  {/* Page 2: Internet Learning Questions */}
+                  
                   {customizePage === 2 && (
                     <>
                       <div className="form-section">
@@ -580,7 +580,7 @@ const SignUpPage = () => {
                     </>
                   )}
 
-                  {/* Page 3: Parent Information */}
+                  
                   {customizePage === 3 && (
                     <>
                       <div className="form-section">
@@ -634,7 +634,7 @@ const SignUpPage = () => {
                     </>
                   )}
 
-                  {/* Page 4: Final Parent Questions */}
+                  
                   {customizePage === 4 && (
                     <>
                       <div className="form-section">
@@ -691,7 +691,7 @@ const SignUpPage = () => {
               </div>
             )}
 
-            {/* Step 5: Success */}
+            
             {currentStep === 5 && (
               <div className="step-content success-content">
                 <div className="success-icon-large">✓</div>

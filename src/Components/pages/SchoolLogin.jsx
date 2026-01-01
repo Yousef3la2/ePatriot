@@ -77,20 +77,20 @@ const SchoolLogin = () => {
     
     <div className="login-wrapper">
       <div className="login-container">
-        {/* Tabs Header */}
+        
         <div className="tabs-header">
           <button className="tab-btn inactive">Register as a Teacher</button>
           <button className="tab-btn active">Register as a Admin</button>
         </div>
 
-        {/* Form Card */}
+        
         <div className="form-card">
           <h2 className="form-title">Admin Login</h2>
           <p className="form-subtitle">Please enter your details to continue</p>
 
           <form className="login-form" onSubmit={handleLogin}>
             
-            {/* School Dropdown */}
+            
             <div className="input-group">
               <label>School Name</label>
               <div className="custom-select-container" ref={dropdownRef}>
@@ -109,7 +109,7 @@ const SchoolLogin = () => {
                   </span>
                 </div>
 
-                {/* Dropdown Menu */}
+                
                 {isOpen && (
                   <div className="dropdown-menu">
                     {schools.map((school) => (
@@ -118,7 +118,7 @@ const SchoolLogin = () => {
                         className="dropdown-item" 
                         onClick={() => handleSelect(school)}
                       >
-                         {/* Using a placeholder image/logo for the list items like the design */}
+                         
                         <img 
                           src="https://via.placeholder.com/30?text=S" 
                           alt=" " 
@@ -132,7 +132,7 @@ const SchoolLogin = () => {
               </div>
             </div>
 
-            {/* Password Input */}
+            
             <div className="input-group">
               <label>Password</label>
               <div className="password-wrapper">
@@ -152,7 +152,7 @@ const SchoolLogin = () => {
               </div>
             </div>
 
-            {/* Submit Button */}
+            
             <button type="submit" className="submit-btn">Login</button>
 
           </form>

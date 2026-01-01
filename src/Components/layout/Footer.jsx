@@ -15,7 +15,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      {/* Contact Section - White Background */}
+      
       <div className="footer-contact-section" style={{
         background: 'white',
         padding: '30px 80px',
@@ -30,7 +30,7 @@ const Footer = () => {
           margin: '0 auto',
           gap: '40px'
         }}>
-          {/* Contact us via email */}
+          
           <div className="footer-contact-item" style={{ flex: 1 }}>
             <p style={{ fontSize: '13px', color: '#6b7280', margin: '0 0 4px 0' }}>
               Contact us via email at
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
 
-          {/* Call us at */}
+          
           <div className="footer-contact-item" style={{ flex: 1 }}>
             <p style={{ fontSize: '13px', color: '#6b7280', margin: '0 0 4px 0' }}>
               Call us at
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
 
 
-          {/* Chat with us button */}
+          
           <button className="footer-chat-button" style={{
             background: 'white',
             color: '#FF8C00',
@@ -74,9 +74,9 @@ const Footer = () => {
       </div>
 
 
-      {/* Footer - Blue Background */}
+      
       <footer className="footer-main" style={{
-        background: '#0066FF',
+        background: '#1280FE',
         padding: '40px 80px',
         width: '100%'
       }}>
@@ -88,7 +88,7 @@ const Footer = () => {
           margin: '0 auto',
           gap: '80px'
         }}>
-          {/* Left: Logo and Social */}
+          
           <div className="footer-brand-section" style={{ flex: '0 0 auto', maxWidth: '250px' }}>
             <div className="footer-brand-header" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '12px' }}>
               <img src={logo} alt="ePatroit Logo" className="footer-logo" style={{ width: '35px', height: '35px', borderRadius: '8px' }} />
@@ -115,14 +115,14 @@ const Footer = () => {
           </div>
 
 
-          {/* Right: Links Columns */}
+          
           <div className="footer-links-section" style={{
             display: 'flex',
             gap: '80px',
             flex: 1,
             justifyContent: 'flex-end'
           }}>
-            {/* Legal */}
+            
             <div className="footer-links-column">
               <h4 className="footer-column-title" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
                 Legal
@@ -147,7 +147,7 @@ const Footer = () => {
             </div>
 
 
-            {/* Resources */}
+            
             <div className="footer-links-column">
               <h4 className="footer-column-title" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
                 Resources
@@ -177,7 +177,7 @@ const Footer = () => {
             </div>
 
 
-            {/* Quick Links */}
+            
             <div className="footer-links-column">
               <h4 className="footer-column-title" style={{ fontSize: '18px', fontWeight: 'bold', color: 'white', margin: '0 0 20px 0' }}>
                 Quick Links

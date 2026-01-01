@@ -83,7 +83,7 @@ const LoginPage = () => {
 
   return (
     <div className="login-page" dir={language === "ar" ? "rtl" : "ltr"}>
-      {/* Language Toggle */}
+      
       <div className="language-toggle-top">
         <button
           className={`lang-btn ${language === "en" ? "active" : ""}`}
@@ -101,13 +101,13 @@ const LoginPage = () => {
         </button>
       </div>
 
-      {/* Logo Header */}
+      
       <div className="top-logo-left">
               <img src={logo} alt="Patroit Logo" className="top-logo-logo" />
               <span className="top-logo-title">Patroit </span>
       </div>
 
-      {/* Decorative elements */}
+      
       <div className="decoration decoration-top-left"></div>
       <div className="decoration decoration-top-right"></div>
       <div className="decoration decoration-bottom-left"></div>

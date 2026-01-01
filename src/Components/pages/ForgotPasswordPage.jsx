@@ -35,7 +35,7 @@ const ForgotPasswordPage = () => {
 
   return (
     <div className="forgot-password-page">
-      {/* Language Toggle */}
+      
       <div className="language-toggle-top">
         <button
           className={`lang-btn ${language === "en" ? "active" : ""}`}
@@ -53,7 +53,7 @@ const ForgotPasswordPage = () => {
         </button>
       </div>
 
-      {/* Logo Header */}
+      
       <div className="top-logo-header">
         <Link to="/" className="top-logo-link">
           <div className="top-logo-icon">e</div>
@@ -61,7 +61,7 @@ const ForgotPasswordPage = () => {
         </Link>
       </div>
 
-      {/* Decorative elements */}
+      
       <div className="decoration decoration-top-left"></div>
       <div className="decoration decoration-top-right"></div>
       <div className="decoration decoration-bottom-left"></div>

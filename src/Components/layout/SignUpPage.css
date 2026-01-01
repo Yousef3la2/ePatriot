@@ -12,7 +12,7 @@
   padding: 40px 20px;
 }
 
-/* Language Toggle at Top */
+
 .language-toggle-top {
   position: absolute;
   top: 20px;
@@ -65,7 +65,7 @@
   font-weight: 600;
 }
 
-/* Top Logo Header */
+
 .top-logo-header {
   position: absolute;
   top: 20px;
@@ -100,7 +100,7 @@
   color: #1e90ff;
 }
 
-/* Decorative elements */
+
 .decoration {
   position: absolute;
   border-radius: 50%;
@@ -145,7 +145,7 @@
   border-radius: 50% 80% 50% 50%;
 }
 
-/* Sparkles */
+
 .sparkle {
   position: absolute;
   width: 30px;
@@ -203,7 +203,7 @@
   }
 }
 
-/* Signup container */
+
 .signup-container {
   position: relative;
   z-index: 10;
@@ -235,7 +235,7 @@
   padding: 40px 50px;
 }
 
-/* Progress Steps */
+
 .progress-steps {
   display: flex;
   align-items: center;
@@ -302,7 +302,7 @@
   z-index: 1;
 }
 
-/* Step Content */
+
 .step-content {
   animation: fadeIn 0.4s ease-out;
 }
@@ -339,7 +339,7 @@
   font-weight: 600;
 }
 
-/* New Category Selection Design */
+
 .category-selection {
   max-width: 1600px;
   margin: 0 auto;
@@ -583,7 +583,7 @@
   transform: translateY(0);
 }
 
-/* Old Categories Grid */
+
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -626,7 +626,7 @@
   color: #333;
 }
 
-/* Form */
+
 .signup-form {
   display: flex;
   flex-direction: column;
@@ -683,7 +683,7 @@
   font-weight: 600;
 }
 
-/* Code Boxes */
+
 .code-inputs-wrapper {
   display: flex;
   gap: 15px;
@@ -748,7 +748,7 @@
   margin-top: -4px;
 }
 
-/* Buttons */
+
 .next-button,
 .create-account-button,
 .verify-button,
@@ -783,7 +783,7 @@
   transform: translateY(0);
 }
 
-/* Login/Resend Prompts */
+
 .login-prompt,
 .resend-prompt {
   text-align: center;
@@ -806,7 +806,7 @@
   text-decoration: underline;
 }
 
-/* Customize Experience (Step 4) */
+
 .customize-title {
   font-size: 28px;
   font-weight: 700;
@@ -926,7 +926,7 @@
   transform: translateY(0);
 }
 
-/* Success Content */
+
 .success-content {
   text-align: center;
   padding: 20px 0;
@@ -973,7 +973,7 @@
   line-height: 1.5;
 }
 
-/* Responsive */
+
 @media (max-width: 600px) {
   .signup-page {
     padding: 20px 15px;

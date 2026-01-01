@@ -1,16 +1,16 @@
-/* Container Background */
+
 .school-page-container {
   background-color: #f8f9fb;
   min-height: 100vh;
   padding-bottom: 50px;
 }
 
-/* Header Section */
+
 .school-header {
   background: #1280FE;
   color: white;
   text-align: center;
-  padding: 20px 20px 100px 20px; /* Padding bottom increased to allow cards overlap */
+  padding: 20px 20px 100px 20px; 
   position: relative;
   z-index: 1;
 }
@@ -26,17 +26,17 @@
   opacity: 0.9;
 }
 
-/* Content Wrapper */
+
 .content-wrapper {
   max-width: 1250px;
   margin: 0 auto;
   padding: 0 20px;
   position: relative;
   z-index: 2;
-  margin-top: -60px; /* Pull content up to overlap header */
+  margin-top: -60px; 
 }
 
-/* Action Cards (Top Row) */
+
 .action-cards-container {
   display: flex;
   gap: 20px;
@@ -124,7 +124,7 @@
   color: #0056b3;
 }
 
-/* Info Sections */
+
 .info-section {
   background: white;
   border-radius: 16px;
@@ -154,7 +154,7 @@
   font-weight: 600;
 }
 
-/* List Items (Curriculums & Recent Activity) */
+
 .list-item {
   display: flex;
   justify-content: space-between;
@@ -210,7 +210,7 @@
   white-space: nowrap;
 }
 
-/* Teacher Notes Specific */
+
 .note-card {
     display: flex;
     gap: 15px;
@@ -289,10 +289,10 @@
   font-size: 20px;
   color: #555;
   line-height: 1.5;
-  margin-left: 50px; /* Align text with name, below image */
+  margin-left: 50px; 
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .action-cards-container {
     flex-direction: column;
