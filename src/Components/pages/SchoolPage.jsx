@@ -2,6 +2,7 @@ import React from 'react';
 import SchoolNavbar from '../layout/SchoolNavbar';
 import Footer from '../layout/Footer';
 import '../layout/SchoolPage.css'; 
+import { Link } from 'react-router-dom';
 
 import { TeacherIcon, ContentIcon, ListIcon, ArrowRightIcon } from '../ui/Icons';
 
@@ -37,8 +38,9 @@ const SchoolPage = () => {
                 <h3>Teacher Management</h3>
                 <p>oversee your complete roster of teaching staff</p>
                 </div>
-                <a href="#" className="card-link">Go To Teacher Direction <ArrowRightIcon /></a>
-                
+                <Link to="/teacher-management" className="card-link">
+                  Go To Teacher Direction <ArrowRightIcon />
+                </Link>
             </div>
 
             <div className="action-card">
