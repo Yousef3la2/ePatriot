@@ -1,5 +1,6 @@
 import React from 'react';
 import SchoolNavbar from '../layout/SchoolNavbar';
+import { Link } from 'react-router-dom';
 import Footer from '../layout/Footer';
 import '../layout/TeacherManagement.css';
 import { SearchIcon, PlusIcon, ArrowRightMIcon, HeaderDecor } from '../ui/Icons.jsx';
@@ -17,7 +18,13 @@ const TeacherManagement = () => {
           <div className="header-content-inner">
             <h1>Teacher Management</h1>
             <div className="breadcrumb">
-              <span style={{ color: "#404040" }}>School Management center</span> 
+              <Link 
+                to="/school-dashboard" 
+                className="breadcrumb-link"
+                style={{ color: 'rgb(64, 64, 64)', textDecoration: 'none' }}
+              >
+                School Management center
+              </Link>
               <ArrowRightMIcon /> 
               <span className="active-page">Teachers</span>
             </div>
