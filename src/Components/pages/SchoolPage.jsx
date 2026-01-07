@@ -51,7 +51,9 @@ const SchoolPage = () => {
                 <h3>Educational Content Library</h3>
                 <p>Review and customize, and assign lessons and activities for teachers</p>
                 </div>
-                <a href="#" className="card-link">Browse Content Library <ArrowRightIcon /></a>
+                <Link to="/educational-content" className="card-link">
+                  Browse Content Library <ArrowRightIcon />
+                </Link>
             </div>
           </div>
 
