@@ -84,7 +84,9 @@ const TeacherManagement = () => {
               </div>
 
               
-              <button className="show-details-btn">Show Details</button>
+              <Link to={`/teachers/${teacher.id}`} style={{ textDecoration: 'none' }}>
+                <button className="show-details-btn">Show Details</button>
+              </Link>
             </div>
           ))}
         </div>
