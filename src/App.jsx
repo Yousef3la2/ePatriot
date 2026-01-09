@@ -4,6 +4,8 @@ import HomePage from "./Components/pages/HomePage";
 import LoginPage from "./Components/pages/LoginPage";
 import ForgotPasswordPage from "./Components/pages/ForgotPasswordPage";
 import SignUpPage from "./Components/pages/SignUpPage";
+import TeacherManagement from "./Components/pages/TeacherManagement";
+import TeacherDetails from "./Components/pages/TeacherDetails";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/forgot-password" element={<ForgotPasswordPage />} />
       <Route path="/signup" element={<SignUpPage />} />
+      <Route path="/teachers" element={<TeacherManagement />} />
+      <Route path="/teachers/:id" element={<TeacherDetails />} />
     </Routes>
   );
 }
