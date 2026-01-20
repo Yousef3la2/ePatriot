@@ -348,34 +348,45 @@ input:checked + .slider:before {
 
 .tabs-header {
   display: flex;
-  border-bottom: 1px solid #e5e7eb;
+  width: 1280px;
+  height: 48px;
+  border-bottom: 2px solid #E5E5E5;
   background: transparent;
+  padding: 0;
+  gap: 0;
+  opacity: 1;
 }
 
 .tab-btn {
   flex: 1;
-  padding: 16px 24px;
+  width: 421.33px;
+  height: 48px;
+  padding: 12px 16px;
   background: transparent;
   border: none;
-  font-size: 14px;
-  font-weight: 500;
-  color: #374151;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6B6B6B;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-duration: 300ms;
   position: relative;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
+  gap: 4px;
+  opacity: 1;
+  text-align: center;
 }
 
 .tab-btn:hover {
   color: #FF8A00;
-  border-bottom-color: #FF8A00;
 }
 
 .tab-btn.active {
   background: transparent;
   color: #FF8A00;
   font-weight: 600;
-  border-bottom-color: #FF8A00;
+  border-bottom: 2px solid #FF8A00;
 }
 
 .tab-btn.active::after {
@@ -457,18 +468,39 @@ input:checked + .slider:before {
 }
 
 .status-badge.completed {
-  background-color: #d1fae5;
+  width: 109px;
+  height: 44px;
+  background-color: #D3F8E4;
   color: #065f46;
+  border-radius: 48px;
+  padding: 10px;
+  gap: 10px;
+  opacity: 1;
 }
 
 .status-badge.in-progress {
-  background-color: #fed7aa;
+  width: 113px;
+  height: 44px;
+  background-color: #FFF1CC;
   color: #92400e;
+  border-radius: 48px;
+  padding: 10px;
+  gap: 10px;
+  opacity: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .status-badge.not-started {
-  background-color: #e5e7eb;
+  width: 113px;
+  height: 44px;
+  background-color: #D9D9D9;
   color: #4b5563;
+  border-radius: 48px;
+  padding: 10px;
+  gap: 10px;
+  opacity: 1;
 }
 
 /* Action Buttons */
@@ -540,12 +572,14 @@ input:checked + .slider:before {
 
 .modal-content {
   background: white;
-  border-radius: 16px;
-  padding: 40px;
-  max-width: 480px;
+  border-radius: 24px;
+  padding: 48px 40px 36px;
+  max-width: 500px;
   width: 90%;
   text-align: center;
   animation: slideUp 0.3s ease-out;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  font-family: 'IBM Plex Sans', 'Cairo', sans-serif;
 }
 
 @keyframes slideUp {
@@ -560,75 +594,97 @@ input:checked + .slider:before {
 }
 
 .modal-icon {
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   display: flex;
   justify-content: center;
 }
 
 .modal-icon svg {
-  background: #ef4444;
-  border-radius: 20px;
-  padding: 16px;
-  width: 64px;
-  height: 64px;
-}
-
-.modal-icon svg path {
-  stroke: white;
+  width: 56px;
+  height: 56px;
 }
 
 .modal-title {
+  font-family: 'IBM Plex Sans', 'Cairo', sans-serif;
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
   color: #1a1a1a;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .modal-description {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 32px;
+  font-family: 'IBM Plex Sans', 'Cairo', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 36px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-actions {
   display: flex;
-  gap: 12px;
+  gap: 16px;
   justify-content: center;
 }
 
 .modal-cancel-btn {
-  padding: 14px 32px;
-  background: #e5e7eb;
+  width: 173px;
+  height: 56px;
+  padding: 16px 24px;
+  background: #D9D9D9;
   color: #374151;
   border: none;
-  border-radius: 12px;
-  font-size: 15px;
+  border-radius: 32px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
-  min-width: 120px;
+  transition: all 0.2s;
+  opacity: 1;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-cancel-btn:hover {
-  background: #d1d5db;
+  background: #c4c4c4;
+  transform: translateY(-1px);
 }
 
 .modal-delete-btn {
-  padding: 14px 32px;
-  background: #ef4444;
+  width: 173px;
+  height: 56px;
+  padding: 16px 24px;
+  background: #FC364A;
   color: white;
   border: none;
-  border-radius: 12px;
-  font-size: 15px;
+  border-radius: 32px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
-  min-width: 120px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(252, 54, 74, 0.3);
+  opacity: 1;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-delete-btn:hover {
-  background: #dc2626;
+  background: #e62f41;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(252, 54, 74, 0.4);
 }
 
 /* Assign Lesson Section */
@@ -748,19 +804,39 @@ input:checked + .slider:before {
 }
 
 .assign-btn {
-  padding: 10px 22px;
+  width: 203px;
+  height: 50px;
+  padding: 10px 20px;
   background: #0EA5E9;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 12px;
+  font-family: 'IBM Plex Sans', 'Cairo', sans-serif;
+  font-size: 16px;
   font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
   cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: 6px;
+  justify-content: center;
+  gap: 10px;
+  opacity: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 300ms;
+}
+
+.assign-btn.assigned-btn {
+  background: #1CB061;
+  cursor: default;
+}
+
+.assign-btn.assigned-btn:hover {
+  background: #1CB061;
+  transform: none;
+  box-shadow: none;
 }
 
 .assign-btn:hover {
@@ -770,25 +846,29 @@ input:checked + .slider:before {
 }
 
 .assign-btn svg {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
+  opacity: 1;
 }
 
 .assigned-label {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-family: 'IBM Plex Sans', 'Cairo', sans-serif;
+  font-size: 16px;
   font-weight: 600;
-  color: #10b981;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #1CB061;
+  background: transparent;
+  padding: 4px 0;
 }
 
 .assigned-label svg {
-  width: 20px;
-  height: 20px;
-  padding: 3px;
-  background: #10b981;
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
 }
 
 /* Timetable Section */
